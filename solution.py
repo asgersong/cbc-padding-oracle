@@ -22,9 +22,9 @@ def oracle(ciphertext: bytes, base_url: str) -> bool:
 
     text = resp.text.strip()
         
-    # print debug statement
-    print("DEBUG response:", text)
-    
+    # debug print statement
+    # print("DEBUG response:", text)
+
     # If the response contains "incorrect", then padding was rejected.
     if "incorrect" in text.lower():
         return False
@@ -155,9 +155,7 @@ def encrypt_plaintext(plaintext: bytes, base_url: str) -> bytes:
 
 def extract_secret(plaintext: bytes) -> str:
     """
-    Extracts the secret from the plaintext, which is of the form:
-       b'You never figure out that "<secret>". :)'
-    Returns the secret string.
+    Extracts the secret from the plaintext, which is enclosed in double quotes.
     """
     text = plaintext.decode()
     start = text.find('"')
