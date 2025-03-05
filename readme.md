@@ -1,8 +1,8 @@
-# Task 1: CBC Padding Oracle
+# CBC Padding Oracle
 
-_Disclaimer_: If you have solved this challenge as part of DISSY, please pick another one as instructed in class.
+_Disclaimer_: This is a solution to a Systems Security Assignment from Aarhus University
 
-## Your Task
+## The Task
 
 You are given the source code of a simple website that distributed quotes.
 However, you only receive a quote if you can present a cookie containing a
@@ -44,7 +44,7 @@ $ FLASK_APP=main flask run          # (4) run the application
 The next time you want to run the service, you only need to repeat step (4)
 (possibly after activating the virtual environment again Step (4)).
 
-Alternatively, we also prepared a Docker container that you can use:
+Alternatively, a Docker container that you can use is also prepared:
 ```
 # docker build -t cbc-padding-oracle .
 # docker run -p 5000:80 cbc-padding-oracle
